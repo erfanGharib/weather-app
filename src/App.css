@@ -1,3 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: poppins;
+  src: url(./assets/fonts/Poppins-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: poppins;
+  src: url(./assets/fonts/Poppins-Medium.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: poppins;
+  src: url(./assets/fonts/Poppins-Light.ttf);
+  font-weight: 200;
+}
+* {
+  font-family: poppins;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +58,59 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#suny-w {
+  background-image: url(./assets/images/suny.jpg);
+}
+#cloudy-w {
+  background-image: url(./assets/images/cloudy.jpg);
+}
+#bit-cloudy-w {
+  background-image: url(./assets/images/bit-cloudy.jpg);
+}
+#rainy-w {
+  background-image: url(./assets/images/rainy.jpg);
+}
+#snowy-w {
+  background-image: url(./assets/images/snowy.jpg);
+}
+
+.ico {
+  @apply block w-4 h-4;
+  background-size: 100%;
+}
+.wind-speed {
+  background-image: url(assets/icons/wind.png);
+}
+.humidity {
+  background-image: url(assets/icons/humidity.png);
+}
+.search {
+  background-image: url(assets/icons/search.png);
+}
+/* .arrow-down {
+  background-image: url(assets/icons/arrow-down.png);
+} */
+.suny {
+  background-image: url(assets/icons/suny.png);
+}
+.cloudy {
+  background-image: url(assets/icons/cloudy.png);
+}
+.bit-cloudy {
+  background-image: url(assets/icons/bit-cloudy.png);
+}
+.rainy {
+  background-image: url(assets/icons/rainy.png);
+}
+.location {
+  background-image: url(assets/icons/place.png);
+}
+.snowy {
+  background-image: url(assets/icons/snowy.png);
+}
+
+.app-bg-gradiant {
+  background-image: radial-gradient(circle at top left, #ffffff32, #ffffffc7);
 }
