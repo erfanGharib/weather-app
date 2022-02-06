@@ -1,13 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: poppins;
+  src: url(./assets/fonts/Poppins-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: poppins;
+  src: url(./assets/fonts/Poppins-Medium.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: poppins;
+  src: url(./assets/fonts/Poppins-Light.ttf);
+  font-weight: 200;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.search-result-child {
+  @apply hover:bg-opacity-90 hover:text-opacity-90 cursor-pointer w-full bg-white bg-opacity-80 h-12 text-base border-b flex items-center px-3 text-gray-900 text-opacity-30
+}
+
+#suny-w {
+  background-image: url(./assets/images/suny.jpg);
+}
+#cloudy-w {
+  background-image: url(./assets/images/cloudy.jpg);
+}
+#bit-cloudy-w {
+  background-image: url(./assets/images/bit-cloudy.jpg);
+}
+#rainy-w {
+  background-image: url(./assets/images/rainy.jpg);
+}
+#snowy-w {
+  background-image: url(./assets/images/snowy.jpg);
+}
+
+.ico {
+  @apply block min-w-4 min-h-4;
+  background-size: 100%;
+}
+.wind-speed {
+  background-image: url(assets/icons/wind.png);
+}
+.humidity {
+  background-image: url(assets/icons/humidity.png);
+}
+.suny {
+  background-image: url(assets/icons/suny.png);
+}
+.cloudy {
+  background-image: url(assets/icons/cloudy.png);
+}
+.bit-cloudy {
+  background-image: url(assets/icons/bit-cloudy.png);
+}
+.rainy {
+  background-image: url(assets/icons/rainy.png);
+}
+.location {
+  background-image: url(assets/icons/place.png);
+}
+.snowy {
+  background-image: url(assets/icons/snowy.png);
+}
+.search {
+  background-image: url(assets/icons/search.png);
 }

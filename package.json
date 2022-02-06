@@ -7,6 +7,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.25.0",
+    "cities.json": "^1.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
@@ -18,7 +19,7 @@
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "tailwindcss src/app.css -o src/tailwind.css"
+    "build:css": "tailwindcss src/index.css -o src/tailwind.css"
   },
   "eslintConfig": {
     "extends": [
