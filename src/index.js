@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './App'
 import reportWebVitals from './reportWebVitals';
-import Location from './components/location';
-import WeatherProperties from './components/weather-properties';
-import axios from 'axios';
+import './index.css';
+import './tailwind.css';
+
+const API_Key = 'da613b7cacea4b4e9f8150424220102';
+export default API_Key;
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Location />
-    <WeatherProperties />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
 
