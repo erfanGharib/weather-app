@@ -482,8 +482,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0.75rem;
 }
 
-.top-14 {
-  top: 3.5rem;
+.top-12 {
+  top: 3rem;
 }
 
 .-z-10 {
@@ -560,8 +560,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
-.w-2\/6 {
-  width: 33.333333%;
+.w-11\/12 {
+  width: 91.666667%;
 }
 
 .w-6 {
@@ -574,6 +574,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-44 {
   width: 11rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-col {
@@ -618,8 +622,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-opacity-20 {
-  --tw-bg-opacity: 0.2;
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
+}
+
+.bg-opacity-10 {
+  --tw-bg-opacity: 0.1;
 }
 
 .bg-opacity-80 {
@@ -677,11 +685,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .font-medium {
   font-weight: 500;
 }
@@ -703,9 +706,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-sky-900 {
+.text-gray-900 {
   --tw-text-opacity: 1;
-  color: rgb(12 74 110 / var(--tw-text-opacity));
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .text-opacity-90 {
@@ -761,33 +764,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.search-result-child {
-  display: flex;
-  height: 3rem;
-  width: 100%;
-  cursor: pointer;
-  align-items: center;
-  border-bottom-width: 1px;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.8;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-  --tw-text-opacity: 0.3;
-}
-
-.search-result-child:hover {
-  --tw-bg-opacity: 0.9;
-  --tw-text-opacity: 0.9;
 }
 
 #suny-w {
@@ -825,10 +807,6 @@ code {
   background-image: url(assets/icons/humidity.png);
 }
 
-/* .arrow-down {
-  background-image: url(assets/icons/arrow-down.png);
-} */
-
 .suny {
   background-image: url(assets/icons/suny.png);
 }
@@ -857,23 +835,26 @@ code {
   background-image: url(assets/icons/search.png);
 }
 
-.app-bg-gradiant {
-  background-image: radial-gradient(circle at top left, #ffffff3b, #0d2e53c5);
+.selected-day {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  opacity: 1;
 }
 
-.placeholder\:text-sky-900::-webkit-input-placeholder {
+.placeholder\:text-gray-900::-webkit-input-placeholder {
   --tw-text-opacity: 1;
-  color: rgb(12 74 110 / var(--tw-text-opacity));
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
-.placeholder\:text-sky-900:-ms-input-placeholder {
+.placeholder\:text-gray-900:-ms-input-placeholder {
   --tw-text-opacity: 1;
-  color: rgb(12 74 110 / var(--tw-text-opacity));
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
-.placeholder\:text-sky-900::placeholder {
+.placeholder\:text-gray-900::placeholder {
   --tw-text-opacity: 1;
-  color: rgb(12 74 110 / var(--tw-text-opacity));
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .placeholder\:opacity-30::-webkit-input-placeholder {
@@ -888,6 +869,12 @@ code {
   opacity: 0.3;
 }
 
+@media (min-width: 640px) {
+  .sm\:w-2\/3 {
+    width: 66.666667%;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:px-6 {
     padding-left: 1.5rem;
@@ -897,5 +884,11 @@ code {
   .md\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-2\/6 {
+    width: 33.333333%;
   }
 }

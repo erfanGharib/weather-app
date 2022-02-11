@@ -33,7 +33,8 @@ code {
 }
 
 .search-result-child {
-  @apply hover:bg-opacity-90 hover:text-opacity-90 cursor-pointer w-full bg-white bg-opacity-80 h-12 text-base border-b flex items-center px-3 text-gray-900 text-opacity-30
+  @apply bg-trimmedWhite hover:bg-bitTrimmedWhite transition duration-200 cursor-pointer w-full h-12 text-base border-t border-t-gray-300 flex items-center px-4 text-gray-600;
+  text-shadow: none;
 }
 
 #suny-w {
@@ -82,4 +83,7 @@ code {
 }
 .search {
   background-image: url(assets/icons/search.png);
+}
+.selected-day {
+  @apply text-4xl font-bold opacity-100;
 }

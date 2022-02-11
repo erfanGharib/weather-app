@@ -21,6 +21,10 @@ module.exports = {
       },
       minHeight: {
         4:'1rem'
+      },
+      backgroundColor: {
+        trimmedWhite:'#e1e5e7',
+        bitTrimmedWhite:'#f6f9f9'
       }
     },
   },
