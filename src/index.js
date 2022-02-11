@@ -8,10 +8,7 @@ import './tailwind.css';
 const API_Key = 'da613b7cacea4b4e9f8150424220102';
 export default API_Key;
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
