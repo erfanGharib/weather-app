@@ -8,8 +8,6 @@ import cities from 'cities.json'
 import './App.css';
 import './tailwind.css';
 
-let searchResultChild='';
-
 class App extends Component {
   constructor() {
     super();
@@ -37,11 +35,8 @@ class App extends Component {
           document.querySelector('#search-result')
         )
           
-      if (index === 3) {
-        console.log(n.name);
-        // searchResultChild='';
+      if (index === 3) 
         return;
-      }
     })
   }
 
