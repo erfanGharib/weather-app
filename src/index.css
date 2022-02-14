@@ -33,23 +33,23 @@ code {
 }
 
 .search-result-child {
-  @apply bg-trimmedWhite hover:bg-bitTrimmedWhite transition duration-200 cursor-pointer w-full h-12 text-base border-t border-t-gray-300 flex items-center px-4 text-gray-600;
+  @apply bg-trimmedWhite hover:bg-bitTrimmedWhite transition duration-100 cursor-pointer w-full h-12 text-base border-t border-t-gray-300 flex items-center px-4 text-gray-600;
   text-shadow: none;
 }
 
-#suny-w {
+#sun-w {
   background-image: url(./assets/images/suny.jpg);
 }
-#cloudy-w {
+#cloud-w {
   background-image: url(./assets/images/cloudy.jpg);
 }
 #bit-cloudy-w {
   background-image: url(./assets/images/bit-cloudy.jpg);
 }
-#rainy-w {
+#rain-w {
   background-image: url(./assets/images/rainy.jpg);
 }
-#snowy-w {
+#snow-w {
   background-image: url(./assets/images/snowy.jpg);
 }
 
@@ -63,27 +63,28 @@ code {
 .humidity {
   background-image: url(assets/icons/humidity.png);
 }
-.suny {
-  background-image: url(assets/icons/suny.png);
-}
-.cloudy {
-  background-image: url(assets/icons/cloudy.png);
-}
-.bit-cloudy {
-  background-image: url(assets/icons/bit-cloudy.png);
-}
-.rainy {
-  background-image: url(assets/icons/rainy.png);
-}
 .location {
   background-image: url(assets/icons/place.png);
-}
-.snowy {
-  background-image: url(assets/icons/snowy.png);
 }
 .search {
   background-image: url(assets/icons/search.png);
 }
-.selected-day {
-  @apply text-4xl font-bold opacity-100;
+.sun {
+  background-image: url(assets/icons/suny.png);
+}
+.cloud {
+  background-image: url(assets/icons/cloudy.png);
+}
+.bit-cloud {
+  background-image: url(assets/icons/bit-cloudy.png);
+}
+.rain {
+  background-image: url(assets/icons/rainy.png);
+}
+.snow {
+  background-image: url(assets/icons/snowy.png);
+}
+
+#selected-day {
+  @apply opacity-100 scale-110;
 }
