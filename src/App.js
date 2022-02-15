@@ -30,9 +30,14 @@ class App extends Component {
   }
 
   changeBg_Ico() {
-    const weatherText = ['sun', 'cloud', 's', 'rain', 'snow'];
+    const weatherText = ['sun', 'cloud', 'cloud', 'rain', 'snow'];
     for (let index = 0; index < weatherText.length; index++) {
       if (this.state.weatherText.apiText.toLowerCase().includes(weatherText[index])) {
+        const weatherTextResult = {
+          apiText: this.state.weatherText.apiText,
+          bg_icoText: weatherText[index]
+        }
+        this.setState({ weatherText: weatherTextResult })
         document.body.id = `${weatherText[index]}-w`;
         break;
       }
@@ -40,64 +45,57 @@ class App extends Component {
   }
 
   citySearch = () => {
-    const city_ = ['erfan', 'ali', 'navid', 'hosein', 'reza', 'alireza'];
-
     this.inputRef.current.classList.remove('rounded-lg');
-    
-    for (let index = 0; index < city_.length; index++) {
-      if (this.inputRef.current.value === '') {
-        ReactDOM.render(<React.Fragment></React.Fragment>, document.querySelector('#search-result'));
-        this.inputRef.current.classList.add('rounded-lg');
-        break;
-      }
 
-      else {
-          ReactDOM.render(
-          <li style={{cursor:'default'}} className='search-result-child hover:bg-trimmedWhite'>Not Found</li>,
-          document.querySelector('#search-result')
-        )
-      }
-
-      if (city_[index].toLowerCase().startsWith(this.inputRef.current.value.toLowerCase())) {
+    for (let index = 0; index < cities.length; index++) {
+      if (cities[index].name.toLowerCase().startsWith(this.inputRef.current.value.toLowerCase())) {
         ReactDOM.render(
           <React.Fragment>
             <li
               className='search-result-child'
-              onClick={this.setState({ currentCity: city_[index] })}
+              onClick={()=>this.changeCity(cities[index].name)}
               key={index}
             >
-              {city_[index]}
-            </li>
-
-            <li
-              className='search-result-child'
-              onClick={this.setState({ currentCity: city_[index + 1] })}
-              key={index + 1}
-            >
-              {city_[index + 1]}
-            </li>
-
-            <li
-              className='search-result-child'
-              onClick={this.setState({ currentCity: city_[index + 2] })}
-              key={index + 2}
-            >
-              {city_[index + 2]}
+              {cities[index].name}
             </li>
           </React.Fragment>,
           document.querySelector('#search-result')
         )
-        if (index === 3)
-          break;
+        break;
+      }
+      if (this.inputRef.current.value === '') {
+        this.removeSearchSuggestion();
+        break;
+      }
+
+      else {
+        ReactDOM.render(
+          <li
+            style={{ cursor: 'default' }}
+            className='search-result-child hover:bg-trimmedWhite'
+          >
+            Not Found
+          </li>,
+          document.querySelector('#search-result')
+        )
       }
     }
   }
 
+  removeSearchSuggestion =()=> {
+    ReactDOM.render(<React.Fragment></React.Fragment>, document.querySelector('#search-result'));
+    this.inputRef.current.classList.add('rounded-lg');
+  }
+
   changeDay = selectedDay => {
     this.setState({ selectedDay: selectedDay });
-    this.componentDidMount()
+    this.componentDidMount();
   }
-  changeCity = currentCity => this.setState({ currentCity });
+
+  changeCity = currentCity => {
+    this.setState({ currentCity });
+    this.removeSearchSuggestion();
+  };
 
   componentDidMount = () => {
     axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${API_Key}&q=${this.state.currentCity}&days=4`)
@@ -106,7 +104,6 @@ class App extends Component {
 
         const weatherTextResult = this.state.weatherText;
         weatherTextResult.apiText = data.day.condition.text;
-        weatherTextResult.bg_icoText = data.day.condition.text;
 
         this.setState({
           weatherText: weatherTextResult,
