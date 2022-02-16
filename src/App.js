@@ -92,13 +92,14 @@ class App extends Component {
     this.componentDidMount();
   }
 
-  changeCity = currentCity => {
-    this.setState({ currentCity });
-    this.removeSearchSuggestion();
+  changeCity = async currentCity => {
+    await this.setState({ currentCity: currentCity });
+    await this.removeSearchSuggestion();
+    await this.componentDidMount();
   };
 
   componentDidMount = () => {
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${API_Key}&q=${this.state.currentCity}&days=4`)
+    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${API_Key}&q=${this.state.currentCity}&days=4`)
       .then(res => {
         const data = res.data.forecast.forecastday[this.state.selectedDay];
 

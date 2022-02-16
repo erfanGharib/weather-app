@@ -43,7 +43,7 @@ class WeatherProperties extends Component {
                     
                     <span 
                         id='weather-text' 
-                        className='capitalize font-medium text-3xl'
+                        className='capitalize font-medium text-3xl mt-2'
                     >
                         {weatherText.apiText}
                     </span>
@@ -72,7 +72,7 @@ class WeatherProperties extends Component {
     
                 <div
                     id='day-of-week'
-                    className='relative text-opacity-90 flex flex-col my-auto items-center'
+                    className='relative text-opacity-90 flex flex-col my-auto items-center mt-6'
                 >
                     {this.days.map((value,li)=>
                         <button 
